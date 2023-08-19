@@ -17,7 +17,7 @@ function downloadAsar() {
       const releases = JSON.parse(body.toString("utf-8"));
       const release = releases.at(0);
       const asset = release.assets.find((asset) => asset.name === "vx.asar");
-  
+
       request(asset.url, {
         headers: {
           "User-Agent": "VX~Installer",
